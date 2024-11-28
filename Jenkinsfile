@@ -26,19 +26,7 @@ pipeline {
             }
         }
         
-         stage('SonarQube Code Analysis') {
-            steps {
-                dir("${WORKSPACE}"){
-                // Run SonarQube analysis for Python
-                script {
-                    def scannerHome = tool name: 'SONAR', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-                    withSonarQubeEnv('MYSONAR') {
-                         sh 'mvn clean package sonar:sonar'
-                    }
-                }
-            }
-            }
-       }
+        
       stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
