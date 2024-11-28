@@ -43,7 +43,7 @@ pipeline {
        nexusArtifactUploader(
         nexusVersion: 'nexus3',
         protocol: 'http',
-        nexusUrl: 'http://18.61.126.143:8081/',
+        nexusUrl: '18.61.126.143:8081',
         groupId: 'Devopa',
         version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
         repository: 'maven-releases',
