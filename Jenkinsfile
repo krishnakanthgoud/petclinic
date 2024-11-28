@@ -49,7 +49,7 @@ pipeline {
         repository: 'maven-releases',
         credentialsId: 'NEXUS',
         artifacts: [
-            [artifactId: projectName,
+            [artifactId: 'MAVENFILE',
              classifier: '',
              file: 'target/spring-petclinic-3.4.0-SNAPSHOT.jar',
              type: 'jar']
