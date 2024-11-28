@@ -20,7 +20,7 @@ pipeline {
             }
         }
         
-        ('SonarQube Code Analysis') {
+         stage('SonarQube Code Analysis') {
             steps {
                 dir("${WORKSPACE}"){
                 // Run SonarQube analysis for Python
